@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { DisplayBook, SearchBar } from './components'
+import styles from './App.module.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+    render() {
+        return (
+            <div className={styles.container}>
+                <h1>Book Repo</h1>
+                <h2>Listing the Best Book Online</h2>
+                {/* <SearchBar /> */}
+                <DisplayBook />
+            </div>
+        )
+    }
 }
-
-export default App;
